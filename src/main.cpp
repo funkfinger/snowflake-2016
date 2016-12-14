@@ -6,14 +6,21 @@
 #define PIN      0
 #define N_LEDS 5
 
+
+#define set(x) |= (1<<x)
+#define clr(x) &=~(1<<x) 
+#define inv(x) ^=(1<<x)
+
 void nightyNight();
 uint32_t Wheel(byte);
 uint8_t awakeCounter = 0;
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(N_LEDS, PIN, NEO_GRB + NEO_KHZ800);
 
-int wait = 200; // how long we wait on each color (milliseconds)
  
 void setup() {
+  // power control pin...
+  DDRB set(DDB1);  
+  
   // disable interrupts...
   cli();
   
@@ -37,8 +44,10 @@ void setup() {
   sei();
   
   strip.begin();
+  strip.setBrightness(40);
 }
- 
+
+uint8_t ledsOn = 0;
 void loop() {
   uint8_t color = 0;
   uint8_t currentPix = 0;
@@ -46,8 +55,11 @@ void loop() {
   
   for (;;) {
     nightyNight();
+    // turn led pixels power on...
                
-    if(awakeCounter > 220) {
+    if(awakeCounter > 120) {
+      digitalWrite(PORTB1, HIGH);
+      // WDTCR = (1<<WDIE) | (0<<WDP0);
       WDTCR = (1<<WDIE) | (1<<WDP2) | (1<<WDP1);
       onTime++;
       color++;
@@ -63,9 +75,10 @@ void loop() {
     }
     else {
       // turn off
+      // WDTCR = (1<<WDIE) | (1<<WDP2) | (1<<WDP1);
+      digitalWrite(PORTB1, LOW);
       strip.clear();
       strip.show();
-      WDTCR = (1<<WDIE) | (0<<WDP0);
     }
   }
 }

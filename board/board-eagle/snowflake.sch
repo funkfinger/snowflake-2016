@@ -4966,7 +4966,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </classes>
 <parts>
 <part name="U$1" library="my-custom-lib" deviceset="BATTERY" device=""/>
-<part name="U1" library="SparkFun-DigitalIC" deviceset="ATTINY45" device="TINY85-20-SMT" value="Tiny85-20-SMT"/>
+<part name="U1" library="SparkFun-DigitalIC" deviceset="ATTINY45" device="TINY85-20-SMT"/>
 <part name="D1" library="my-custom-lib" deviceset="WS2812B" device="EDGE_MOUNT_5MM_LED"/>
 <part name="D2" library="my-custom-lib" deviceset="WS2812B" device="EDGE_MOUNT_5MM_LED"/>
 <part name="D3" library="my-custom-lib" deviceset="WS2812B" device="EDGE_MOUNT_5MM_LED"/>
@@ -4974,11 +4974,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="D5" library="my-custom-lib" deviceset="WS2812B" device="EDGE_MOUNT_5MM_LED"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
-<part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="P+4" library="supply1" deviceset="VCC" device=""/>
-<part name="P+5" library="supply1" deviceset="VCC" device=""/>
-<part name="P+6" library="supply1" deviceset="VCC" device=""/>
-<part name="P+7" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
@@ -5006,11 +5001,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="D5" gate="G$1" x="5.08" y="96.52"/>
 <instance part="GND1" gate="1" x="-2.54" y="45.72"/>
 <instance part="P+2" gate="VCC" x="99.06" y="78.74"/>
-<instance part="P+3" gate="VCC" x="119.38" y="106.68"/>
-<instance part="P+4" gate="VCC" x="88.9" y="106.68"/>
-<instance part="P+5" gate="VCC" x="58.42" y="106.68"/>
-<instance part="P+6" gate="VCC" x="27.94" y="106.68"/>
-<instance part="P+7" gate="VCC" x="-2.54" y="106.68"/>
 <instance part="GND2" gate="1" x="99.06" y="48.26"/>
 <instance part="GND3" gate="1" x="86.36" y="88.9"/>
 <instance part="GND4" gate="1" x="147.32" y="88.9"/>
@@ -5078,36 +5068,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 </net>
 <net name="VCC" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="VDD"/>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="121.92" y1="101.6" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="101.6" x2="119.38" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D2" gate="G$1" pin="VDD"/>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<wire x1="91.44" y1="101.6" x2="88.9" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="101.6" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D3" gate="G$1" pin="VDD"/>
-<pinref part="P+5" gate="VCC" pin="VCC"/>
-<wire x1="60.96" y1="101.6" x2="58.42" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="101.6" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D5" gate="G$1" pin="VDD"/>
-<pinref part="P+7" gate="VCC" pin="VCC"/>
-<wire x1="0" y1="101.6" x2="-2.54" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="101.6" x2="-2.54" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D4" gate="G$1" pin="VDD"/>
-<pinref part="P+6" gate="VCC" pin="VCC"/>
-<wire x1="30.48" y1="101.6" x2="27.94" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="101.6" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
@@ -5200,6 +5160,36 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
 <label x="33.02" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="D5" gate="G$1" pin="VDD"/>
+<wire x1="0" y1="101.6" x2="-2.54" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="101.6" x2="-2.54" y2="104.14" width="0.1524" layer="91"/>
+<label x="-2.54" y="106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D4" gate="G$1" pin="VDD"/>
+<wire x1="30.48" y1="101.6" x2="27.94" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="101.6" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
+<label x="27.94" y="106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D2" gate="G$1" pin="VDD"/>
+<wire x1="91.44" y1="101.6" x2="88.9" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="101.6" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
+<label x="88.9" y="106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D1" gate="G$1" pin="VDD"/>
+<wire x1="121.92" y1="101.6" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="101.6" x2="119.38" y2="104.14" width="0.1524" layer="91"/>
+<label x="119.38" y="106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D3" gate="G$1" pin="VDD"/>
+<wire x1="60.96" y1="101.6" x2="58.42" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="101.6" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
+<label x="58.42" y="106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">

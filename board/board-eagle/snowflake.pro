@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : /Users/jayw/Documents/Electronics/snowflake-2016/board/board-eagle/snowflake.brd
 
-Start at      : 14:48:11 (11/28/16)
-End at        : 14:48:15 (11/28/16)
-Elapsed time  : 00:00:00
+Start at      : 20:30:02 (12/5/16)
+End at        : 20:30:10 (12/5/16)
+Elapsed time  : 00:00:04
 
-Signals       :    18   RoutingGrid: 19.685 mil  Layers: 2
-Connections   :    26   predefined:  25 ( 25 Vias )
+Signals       :    20   RoutingGrid: 9.84252 mil  Layers: 2
+Connections   :    26   predefined:  0 ( 10 Vias )
 
-Router memory :   82928
+Router memory :   311328
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:00  00:00:00  00:00:00  00:00:00
-Number of Ripups  :         0         0         0         0         0
-max. Level        :         0         0         0         0         0
-max. Total        :         0         0         0         0         0
+Time per pass     :  00:00:01  00:00:01  00:00:01  00:00:01  00:00:00
+Number of Ripups  :         1         0         0         0         0
+max. Level        :         1         0         0         0         0
+max. Total        :         5         0         0         0         0
 
-Routed            :         1         1         1         1         1
-Vias              :         0         0         0         0         0
+Routed            :        26        26        26        26        26
+Vias              :        24        20        20        16        16
 Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
-Final             : 96.2% finished. Polygons may have fallen apart.
+Final             : 100.0% finished
